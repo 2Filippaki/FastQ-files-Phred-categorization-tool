@@ -30,7 +30,7 @@ FastQ file categorization in Phred+33 or Phred+64 format
    τοτέ ο χρήστης δεν χρειάζεται να κάνει τίποτα παραπάνω παρά να το τρέξει. Αν δεν είναι εκτελέσιμο τότε θα 
    πρέπει να τρέξει πρώτα την εντολή chmod +x FQcategTool.sh .
 
-2) Εκτέλεση του script ./FQcategTool.sh .
+2) Εκτέλεση του script με την εντολή. ./FQcategTool.sh .
 
 3) Θα εμφανίσει το μήνυμα Name of Directory:
    ___________  όπου ο χρήστης καλείται να δώσει το όνομα του καταλόγου. 
@@ -40,83 +40,15 @@ FastQ file categorization in Phred+33 or Phred+64 format
 
 ##Παραδείγματα εξόδου.
 
-1)Εντολή
+1) Μήνυμα του script στην οθόνη περιμένοντας όνομα καταλόγου. (Π.χ. Name of Directory:) 
 
- ./FQcategTool.sh 
+2) Τα αποτελέσματα για έναν έγκυρο κατάλογο. (Π.χ. Valid Directory! Created Phred33 folder. Created Phred64 folder.)
 
-2)Μήνυμα του script
+3) Τα αποτελέσματα για έναν μη έγκυρο κατάλογο. (Π.χ. Not a valid Directory.)
 
-Name of Directory:
+4) Έγκυρα αρχεία με το όνομα να τελειώνει σε .fastq. (Π.χ. For file: ./file1.fastq. The file is in Phred+33 format. ή The file is in Phred+64 format.)
 
-3)Ο χρήστης δίνει το όνομα του καταλόγου.
-
-/home/user/Bashscript
-
-4)Τα αποτελέσματα για έναν έγκυρο κατάλογο.
-
-Valid Directory!
-Created Phred33 folder.
-Created Phred64 folder.
-
-5) 11 αρχεία με το όνομα file[1-11].fastq όπου το file11.fastq δεν είναι έγκυρο.
-_______________________________
-For file: ./file1.fastq
-The file is in Phred+33 format.
-_______________________________
-_______________________________
-For file: ./file2.fastq
-The file is in Phred+33 format.
-_______________________________
-_______________________________
-For file: ./file3.fastq
-The file is in Phred+64 format.
-_______________________________
-_______________________________
-For file: ./file4.fastq
-The file is in Phred+33 format.
-_______________________________
-_______________________________
-For file: ./file5.fastq
-The file is in Phred+33 format.
-_______________________________
-_______________________________
-For file: ./file6.fastq
-The file is in Phred+64 format.
-_______________________________
-_______________________________
-For file: ./file7.fastq
-The file is in Phred+64 format.
-_______________________________
-_______________________________
-For file: ./file8.fastq
-The file is in Phred+64 format.
-_______________________________
-_______________________________
-For file: ./file9.fastq
-The file is in Phred+33 format.
-_______________________________
-_______________________________
-For file: ./file10.fastq
-The file is in Phred+33 format.
-_______________________________
-_______________________________
-For file: ./file11.fastq
-No valid quality scores found in ./file11.fastq, skipping...
-_______________________________
-
-6)Μη έγκυρος κατάλογος
-
-Εντολή
-/FQcategTool.sh
-
-Μήνυμα του script
-Name of Directory:
-
-Λάθος όνομα ή όνομα αρχείου
-file11.fastq
-
-Εκτύπωση λάθους.
-Not a valid Directory.
+5) Άκυρα αρχεία με το όνομα να τελειώνει σε .fastq. (Π.χ. For file: ./file11.fastq. No valid quality scores found in ./file11.fastq, skipping...)
 
 ##Tips
 
